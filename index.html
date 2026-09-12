@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>For Aafi ❤️</title>
+
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Segoe UI", sans-serif;
+    }
+
+    body {
+        min-height: 100vh;
+        overflow: hidden;
+        background: linear-gradient(135deg, #ff758c, #ff7eb3);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: white;
+    }
+
+    .heart {
+        position: fixed;
+        bottom: -20px;
+        font-size: 20px;
+        animation: float 6s linear infinite;
+        opacity: 0.7;
+        pointer-events: none;
+    }
+
+    @keyframes float {
+        0% {
+            transform: translateY(0) rotate(0deg);
+            opacity: 0;
+        }
+        20% {
+            opacity: 0.8;
+        }
+        100% {
+            transform: translateY(-110vh) rotate(360deg);
+            opacity: 0;
+        }
+    }
+
+    .container {
+        width: 90%;
+        max-width: 500px;
+        text-align: center;
+        position: relative;
+        z-index: 2;
+    }
+
+    .page {
+        display: none;
+        animation: fadeIn 0.7s ease;
+    }
+
+    .page.active {
+        display: block;
+    }
+
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+            transform: translateY(25px) scale(0.95);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0) scale(1);
+        }
+    }
+
+    .emoji {
+        font-size: 70px;
+        margin-bottom: 20px;
+        animation: bounce 1.5s infinite;
+    }
+
+    @keyframes bounce {
+        0%, 100% {
+            transform: translateY(0);
+        }
+        50% {
+            transform: translateY(-10px);
+        }
+    }
+
+    h1 {
+        font-size: 34px;
+        margin-bottom: 15px;
+    }
+
+    h2 {
+        font-size: 27px;
+        margin-bottom: 15px;
+    }
+
+    p {
+        font-size: 18px;
+        line-height: 1.7;
+        margin-bottom: 25px;
+    }
+
+    .card {
+        background: rgba(255,255,255,0.18);
+        backdrop-filter: blur(12px);
+        border: 1px solid rgba(255,255,255,0.3);
+        border-radius: 25px;
+        padding: 35px 25px;
+        box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+    }
+
+    button {
+        border: none;
+        padding: 13px 25px;
+        margin: 7px;
+        border-radius: 30px;
+        font-size: 16px;
+        font-weight: 600;
+        cursor: pointer;
+        transition: 0.3s;
+        background: white;
+        color: #ff4f81;
+    }
+
+    button:hover {
+        transform: scale(1.08);
+        box-shadow: 0 8px 20px rgba(0,0,0,0.18);
+    }
+
+    .yes {
+        background: #ff3864;
+        color: white;
+    }
+
+    .final-heart {
+        font-size: 100px;
+        animation: heartbeat 1s infinite;
+    }
+
+    @keyframes heartbeat {
+        0% {
+            transform: scale(1);
+        }
+        20% {
+            transform: scale(1.15);
+        }
+        40% {
+            transform: scale(1);
+        }
+        60% {
+            transform: scale(1.15);
+        }
+        100% {
+            transform: scale(1);
+        }
+    }
+
+    .signature {
+        margin-top: 25px;
+        font-size: 17px;
+        font-style: italic;
+    }
+
+    .small {
+        font-size: 14px;
+        opacity: 0.85;
+    }
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <!-- PAGE 1 -->
+    <div class="page active" id="page1">
+        <div class="card">
+            <div class="emoji">🥺</div>
+
+            <h1>Hey Aafi...</h1>
+
+            <p>
+                Oru kaaryam parayaan und...
+                <br>
+                Please ee button onnu click cheyyuo? 🥹
+            </p>
+
+            <button onclick="nextPage(2)">
+                Okay... 👀
+            </button>
+        </div>
+    </div>
+
+
+    <!-- PAGE 2 -->
+    <div class="page" id="page2">
+        <div class="card">
+            <div class="emoji">😔</div>
+
+            <h2>Aafi...</h2>
+
+            <p>
+                Ippo ennode pinakkamano? 😭
+                <br><br>
+                Sathyam parayanam...
+            </p>
+
+            <button onclick="nextPage(3)">
+                Athe 😤
+            </button>
+
+            <button onclick="nextPage(4)">
+                Alla 🥹
+            </button>
+        </div>
+    </div>
+
+
+    <!-- PAGE 3 -->
+    <div class="page" id="page3">
+        <div class="card">
+            <div class="emoji">💔</div>
+
+            <h2>Okay... I know 😔</h2>
+
+            <p>
+                Njan enthelum mistake cheythittundengil
+                <br>
+                <b>I'm really sorry, Aafi.</b>
+                <br><br>
+                Ninne upset aakkan njan orikkalum agrahichittilla.
+            </p>
+
+            <button onclick="nextPage(4)">
+                Sorry accepted aano? 🥺
+            </button>
+        </div>
+    </div>
+
+
+    <!-- PAGE 4 -->
+    <div class="page" id="page4">
+        <div class="card">
+            <div class="emoji">🫶</div>
+
+            <h2>One thing...</h2>
+
+            <p>
+                Nammal pinangiyirikkumbol
+                <br>
+                entho oru missing pole aanu. 🥲
+                <br><br>
+                Enikku ente Aafiye chirichu kaanan aanu ishtam. ❤️
+            </p>
+
+            <button onclick="nextPage(5)">
+                Continue... ❤️
+            </button>
+        </div>
+    </div>
+
+
+    <!-- PAGE 5 -->
+    <div class="page" id="page5">
+        <div class="card">
+            <div class="emoji">🥹</div>
+
+            <h2>Last question...</h2>
+
+            <p>
+                Enikk oru last chance tharumo? 🥺
+                <br><br>
+                Pinakkam okke maatti...
+                <br>
+                namukku chill aayi happy aayi irikkaada ❤️
+            </p>
+
+            <button class="yes" onclick="nextPage(6)">
+                Okay ikka ❤️
+            </button>
+
+            <button onclick="moveButton(this)">
+                No 😤
+            </button>
+        </div>
+    </div>
+
+
+    <!-- FINAL PAGE -->
+    <div class="page" id="page6">
+        <div class="card">
+            <div class="final-heart">❤️</div>
+
+            <h1>Aafi 🥹❤️</h1>
+
+            <p>
+                Thank youuu! 🫶
+                <br><br>
+
+                Nee ente ponnoos aahn...my chinnooos
+                <br><br>
+
+                I promise...
+                <br>
+                <b>Ninne happy aakkan njan maximum try cheyyum.</b>
+                <br><br>
+
+                Love you, Aafi. ❤️
+            </p>
+
+            <div class="signature">
+                — Yours, Razeen 🫶
+            </div>
+
+            <br>
+
+            <div class="small">
+                Made with ❤️ just for Aafi
+            </div>
+        </div>
+    </div>
+
+</div>
+
+
+<script>
+
+    // Change page
+    function nextPage(pageNumber) {
+
+        document.querySelectorAll(".page").forEach(page => {
+            page.classList.remove("active");
+        });
+
+        document.getElementById("page" + pageNumber)
+            .classList.add("active");
+    }
+
+
+    // Create floating hearts
+    function createHeart() {
+
+        const heart = document.createElement("div");
+
+        heart.classList.add("heart");
+
+        const hearts = ["❤️", "💗", "💕", "💖", "💓"];
+
+        heart.innerHTML =
+            hearts[Math.floor(Math.random() * hearts.length)];
+
+        heart.style.left =
+            Math.random() * 100 + "vw";
+
+        heart.style.animationDuration =
+            (4 + Math.random() * 4) + "s";
+
+        heart.style.fontSize =
+            (15 + Math.random() * 25) + "px";
+
+        document.body.appendChild(heart);
+
+        setTimeout(() => {
+            heart.remove();
+        }, 8000);
+    }
+
+    setInterval(createHeart, 500);
+
+
+    // Naughty "No" button 😜
+    function moveButton(button) {
+
+        button.style.position = "fixed";
+
+        const maxX =
+            window.innerWidth - button.offsetWidth - 20;
+
+        const maxY =
+            window.innerHeight - button.offsetHeight - 20;
+
+        button.style.left =
+            Math.random() * maxX + "px";
+
+        button.style.top =
+            Math.random() * maxY + "px";
+    }
+
+</script>
+
+</body>
+</html>
